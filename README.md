@@ -1,201 +1,128 @@
-# WiFiClone - ESP32 WiFi Phishing Framework
+﻿# WiFiShield
 
-> Open Source WiFi credential capture tool for security testing & research
+**ESP32 WiFi Penetration Testing Framework | Educational & Research Purpose**
 
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![ESP32](https://img.shields.io/badge/ESP32-Microcontroller-blue)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
-## 📌 Overview
+---
 
-WiFiClone adalah framework untuk ESP32 yang memungkinkan penelitian keamanan WiFi melalui Evil Twin attacks dan credential capture. Tool ini educational untuk security testing dengan izin pemilik network.
+##  Languages | Bahasa
 
-> ⚠️ **DISCLAIMER**: Gunakan hanya untuk testing network Anda sendiri atau dengan izin. Penggunaan tanpa izin adalah ILEGAL.
+- [English (US)](#english)
+- [Bahasa Indonesia](#bahasa-indonesia)
 
 ---
 
-## ✨ Features
+## <a id="english"></a>English
 
-- **Aircrack Integration**  
-  Capture client handshake dan check user input password (WPA/WPA2)
+### Overview
 
-- **Evil Twin Attack**  
-  Create rogue access point yang mimic target network
+WiFiShield is a comprehensive framework for ESP32 microcontroller designed for WiFi security research and penetration testing. It enables Evil Twin attacks, credential capture, and captive portal simulation for authorized security testing.
 
-- **Captive Portal**  
-  Auto redirect users ke phishing page saat connect
+>  **DISCLAIMER**: Use only on networks you own or have explicit permission to test. Unauthorized network penetration is illegal.
 
-- **WiFi Credential Capture**  
-  Tangkap username & password dari login form clone
+### Features
 
-- **Advanced Deauthentication**  
-  WiFi 6 compatible: negative TX power, EAPOL-logoff, EAP-Failure, dll
+- Evil Twin Attack (Rogue Access Point)
+- Captive Portal Simulation
+- WiFi Credential Capture (username/password)
+- Aircrack Handshake Analysis (WPA/WPA2)
+- Advanced Deauthentication Techniques
+- Web Admin Interface
+- Real-time Credential Logging
+- Compact & Portable (ESP32)
 
-- **Vendor Identification**  
-  Auto detect vendor berdasarkan SSID
+### Quick Start
 
-- **Web Admin Interface**  
-  Manage settings & view captured credentials
-
-- **Compact & Portable**  
-  Lightweight pada ESP32 untuk hardware testing
-
-## To-Do List 
-- [☑] Add a channel tracking functionality (some AP may switch channels)
-- [☑] Add a handshake capture and basic aircrack implementation to check a user input password
-- [ ] Add a telegram/email notification when password is succesfully stealed
-
-## Flash the firmware
-Use the [Online Flasher](https://espwifiphisher.alexxdal.com/) to flash your device.
-
-# WifiPhisher for ESP32
-
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/Alexxdal/WifiPhisher)
-
-WifiPhisher for ESP32 is a custom implementation of a phishing tool designed for the ESP32 microcontroller. It performs Evil Twin attacks, allowing users to test the security of Wi-Fi networks and execute social engineering phishing scenarios. The project is built using **PlatformIO** and the **ESP-IDF framework**.
-
-## Requirements
-
-### Hardware
-
-- **ESP32 Development Board**:  
-  Any ESP32 board with Wi-Fi capability (e.g., ESP32-WROOM-32).
-
-- **Power Source**:  
-  A USB connection or battery to power the ESP32.
-
-### Software
-
-- **PlatformIO**:  
-  Integrated into your IDE (e.g., Visual Studio Code). [Install PlatformIO](https://platformio.org/install).
-
-- **ESP-IDF Framework**:  
-  Required for building and flashing the firmware. PlatformIO automatically configures this as part of the development environment.
-
----
-
-## Installation
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/Alexxdal/WifiPhisher.git
-cd WifiPhisher
-```
-
-### 2. Configure PlatformIO
-
-Open the project in your IDE (e.g., Visual Studio Code) and ensure that PlatformIO is correctly set up:
-
-1. Check the `platformio.ini` file in the project root:
-   - Verify that the `platform`, `board`, and `framework` match your ESP32 development board.
-   - Example configuration in `platformio.ini`:
-     ```ini
-     [env:esp32dev]
-     platform = espressif32
-     board = esp32dev
-     framework = espidf
-     ```
-2. Install necessary dependencies by allowing PlatformIO to resolve them during the first build.
-
----
-
-## 🚀 Quick Start
-
-```bash
-# Clone repository
-git clone https://github.com/Harriiee/wificlone.git
-cd wificlone
-
-# Build firmware
+\\\ash
+git clone https://github.com/Harriiee/wifishield.git
+cd wifishield
 python -m platformio run -e esp32
-
-# Flash ke ESP32 (USB sudah terhubung)
 python -m platformio run -e esp32 --target upload
+\\\
 
-# Access admin panel
-# - Connect ke WiFi: "WiFiClone" (pass: 12345678)
-# - Open browser: http://192.168.4.1/admin
-```
+Then connect to WiFi \WiFiShield\ (pass: \12345678\) and access \http://192.168.4.1/admin\
 
-Lihat **QUICK_START.md** untuk panduan lengkap.
+See **QUICK_START.md** for detailed setup guide.
 
----
+### Project Structure
 
-## 📦 Project Structure
+\\\
+ src/              Source code (C)
+ include/          Header files
+ lib/              Libraries
+ platformio.ini    Build configuration
+ QUICK_START.md    Setup guide
+ README.md         Documentation
+ LICENSE           MIT License
+\\\
 
-```
-WifiClone/
-├── src/              # Source code C
-├── include/          # Header files
-├── lib/              # Libraries (libwifi, libpcap)
-├── platformio.ini    # PlatformIO config
-├── CMakeLists.txt    # CMake build config
-├── QUICK_START.md    # Setup guide
-├── README.md         # Dokumentasi ini
-└── LICENSE           # MIT License
-```
+### License
+
+MIT License - Free to use, modify, and distribute.
 
 ---
 
-## 📄 License
+## <a id="bahasa-indonesia"></a>Bahasa Indonesia
 
-Project ini di-release under **MIT License** - bebas digunakan, dimodifikasi, dan didistribusikan kembali.
+### Ringkasan
 
-Lihat file [LICENSE](./LICENSE) untuk detail lengkap.
+WiFiShield adalah framework komprehensif untuk mikrokontroler ESP32 yang dirancang untuk penelitian keamanan WiFi dan penetration testing. Tool ini memungkinkan Evil Twin attacks, credential capture, dan simulasi captive portal untuk security testing yang diizinkan.
 
----
+>  **DISCLAIMER**: Gunakan hanya pada network Anda sendiri atau dengan izin eksplisit. Penetration network tanpa izin adalah ILEGAL.
 
-## 🤝 Contributing
+### Fitur
 
-Kontribusi welcome! Silakan:
-- Fork repository
-- Create feature branch (`git checkout -b feature/AmazingFeature`)
-- Commit changes (`git commit -m 'Add AmazingFeature'`)
-- Push to branch (`git push origin feature/AmazingFeature`)
-- Open Pull Request
+- Evil Twin Attack (Rogue Access Point)
+- Simulasi Captive Portal
+- Tangkap Kredensial WiFi (username/password)
+- Analisis Handshake Aircrack (WPA/WPA2)
+- Teknik Deauthentication Lanjutan
+- Web Admin Interface
+- Logging Kredensial Real-time
+- Kompak & Portable (ESP32)
 
----
+### Memulai Cepat
 
-## ⚖️ Legal & Disclaimer
+\\\ash
+git clone https://github.com/Harriiee/wifishield.git
+cd wifishield
+python -m platformio run -e esp32
+python -m platformio run -e esp32 --target upload
+\\\
 
-**PENTING**: Tool ini hanya untuk educational dan authorized security testing. 
+Kemudian connect ke WiFi \WiFiShield\ (pass: \12345678\) dan akses \http://192.168.4.1/admin\
 
-**DILARANG**:
-- ❌ Gunakan untuk hack network orang lain tanpa izin
-- ❌ Capture credentials tanpa consent
-- ❌ Illegal network penetration
+Lihat **QUICK_START.md** untuk panduan setup lengkap.
 
-**Gunakan bertanggung jawab!**
+### Struktur Proyek
 
----
+\\\
+ src/              Kode source (C)
+ include/          File header
+ lib/              Library eksternal
+ platformio.ini    Konfigurasi build
+ QUICK_START.md    Panduan setup
+ README.md         Dokumentasi
+ LICENSE           MIT License
+\\\
 
-## 📞 Support
+### Lisensi
 
-Jika ada pertanyaan atau issue, buka GitHub Issues di repository ini.
-
----
-
-## 🔗 Links
-
-- **Repository**: https://github.com/Harriiee/wificlone
-- **License**: MIT
-- **Platform**: ESP32, PlatformIO, ESP-IDF
-
----
-
-*Last Updated: January 2026*
-
-### 3. Example Phishing Page
-![Phishing Page Example](./screenshots/phishing_page_example.png)
+MIT License - Bebas digunakan, dimodifikasi, dan didistribusikan.
 
 ---
 
-## Contributions
+## Support
 
-Contributions are welcome! You can improve phishing scenarios, optimize performance, or add new features.
+For issues or questions, open an issue on GitHub repository.
+
+Untuk pertanyaan atau masalah, buka issue di repository GitHub.
 
 ---
 
-## Disclaimer
-
-This tool is intended strictly for educational purposes and ethical hacking in controlled environments. Unauthorized use of WifiPhisher for malicious purposes is illegal and punishable by law. Always ensure you have explicit permission before conducting any testing.
+**Repository**: https://github.com/Harriiee/wifishield  
+**License**: MIT  
+**Last Updated**: January 2026
