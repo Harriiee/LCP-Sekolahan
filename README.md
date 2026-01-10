@@ -1,190 +1,119 @@
 ﻿# WiFiShield
 
-**ESP32 WiFi Penetration Testing Framework**
-
-Comprehensive security research tool for WiFi network testing with Evil Twin attacks, credential capture, and captive portal simulation.
+ESP32 WiFi Penetration Testing Framework for security research and authorized testing.
 
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Platform](https://img.shields.io/badge/Platform-ESP32-blue)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
 ---
 
-##  Documentation
+## Documentation
 
-- **[English](#english)** - Setup & usage guide in English
-- **[Bahasa Indonesia](#bahasa-indonesia)** - Panduan setup dalam Bahasa Indonesia
+- English - Scroll down to English section
+- Bahasa Indonesia - Scroll down to Bahasa Indonesia section
 
 ---
 
-## <a id="english"></a>English Version
+## English
 
-### What is WiFiShield?
+### About WiFiShield
 
-WiFiShield is a framework designed for security researchers and penetration testers to perform authorized WiFi security testing on ESP32 microcontrollers.
+WiFiShield is a security testing framework for ESP32 that enables authorized WiFi network testing.
 
-**Use Cases:**
-- Test network security on your own networks
-- Research WiFi attack vectors
-- Educational security training
-- Authorized penetration testing
+### Features
 
-### Key Features
+- Evil Twin Attack (Rogue Access Point)
+- Credential Capture (username/password)
+- Captive Portal (custom redirect pages)
+- Aircrack Integration (WPA/WPA2 analysis)
+- Deauthentication (advanced techniques)
+- Web Admin Interface (easy management)
 
-| Feature | Description |
-|---------|-------------|
-| Evil Twin | Create fake WiFi networks |
-| Credential Capture | Capture login credentials |
-| Captive Portal | Redirect users to custom pages |
-| Aircrack | Analyze WPA/WPA2 handshakes |
-| Deauthentication | Advanced WiFi disconnect techniques |
-| Web Admin | Easy management interface |
+### Installation
 
-### Quick Start
-
-1. **Clone Repository**
-   \\\ash
+1. Clone repository
+   \\\
    git clone https://github.com/Harriiee/wifishield.git
    cd wifishield
    \\\
 
-2. **Build Firmware**
-   \\\ash
+2. Build firmware
+   \\\
    python -m platformio run -e esp32
    \\\
 
-3. **Flash to ESP32**
-   \\\ash
+3. Flash to ESP32
+   \\\
    python -m platformio run -e esp32 --target upload
    \\\
 
-4. **Connect & Access**
-   - Connect to WiFi: \WiFiShield\
-   - Password: \12345678\
-   - Open: \http://192.168.4.1/admin\
-
-**See QUICK_START.md for detailed setup.**
+4. Access admin panel
+   - WiFi: WiFiShield
+   - Password: 12345678
+   - Address: http://192.168.4.1/admin
 
 ### Requirements
 
-- ESP32 Development Board
+- ESP32 Board
 - USB Cable
-- Python 3.8+
+- Python 3.8 or higher
 - PlatformIO
 
-### Project Structure
+### License
 
-\\\
-wifishield/
- src/              Source code (C)
- include/          Header files
- lib/              External libraries
- platformio.ini    Build configuration
- QUICK_START.md    Setup guide
- README.md         This file
- LICENSE           MIT License
- .git/             Version control
-\\\
-
-### Disclaimer
-
- **IMPORTANT:** Use WiFiShield only on networks you own or have explicit permission to test. Unauthorized network testing is illegal.
+MIT License - Free to use and modify
 
 ---
 
-## <a id="bahasa-indonesia"></a>Versi Bahasa Indonesia
+## Bahasa Indonesia
 
-### Apa itu WiFiShield?
+### Tentang WiFiShield
 
-WiFiShield adalah framework untuk peneliti keamanan dan penetration tester guna melakukan pengujian keamanan WiFi yang sah pada mikrokontroler ESP32.
+WiFiShield adalah framework testing keamanan untuk ESP32 yang memungkinkan testing network WiFi yang sah.
 
-**Kegunaan:**
-- Test keamanan network pribadi
-- Riset vektor serangan WiFi
-- Pelatihan keamanan edukatif
-- Penetration testing yang diizinkan
+### Fitur
 
-### Fitur Utama
+- Evil Twin Attack (Fake Access Point)
+- Tangkap Kredensial (username/password)
+- Captive Portal (custom redirect pages)
+- Aircrack Integration (analisis WPA/WPA2)
+- Deauthentication (teknik lanjutan)
+- Web Admin Interface (manajemen mudah)
 
-| Fitur | Deskripsi |
-|-------|-----------|
-| Evil Twin | Buat network WiFi palsu |
-| Tangkap Kredensial | Tangkap login credentials |
-| Captive Portal | Redirect user ke halaman custom |
-| Aircrack | Analisis handshake WPA/WPA2 |
-| Deauthentication | Teknik disconnect WiFi lanjutan |
-| Web Admin | Interface manajemen mudah |
+### Instalasi
 
-### Memulai Cepat
-
-1. **Clone Repository**
-   \\\ash
+1. Clone repository
+   \\\
    git clone https://github.com/Harriiee/wifishield.git
    cd wifishield
    \\\
 
-2. **Build Firmware**
-   \\\ash
+2. Build firmware
+   \\\
    python -m platformio run -e esp32
    \\\
 
-3. **Flash ke ESP32**
-   \\\ash
+3. Flash ke ESP32
+   \\\
    python -m platformio run -e esp32 --target upload
    \\\
 
-4. **Hubungkan & Akses**
-   - Hubungkan WiFi: \WiFiShield\
-   - Password: \12345678\
-   - Buka: \http://192.168.4.1/admin\
-
-**Lihat QUICK_START.md untuk panduan detail.**
+4. Akses admin panel
+   - WiFi: WiFiShield
+   - Password: 12345678
+   - Alamat: http://192.168.4.1/admin
 
 ### Persyaratan
 
-- ESP32 Development Board
+- Board ESP32
 - Kabel USB
-- Python 3.8+
+- Python 3.8 atau lebih tinggi
 - PlatformIO
 
-### Struktur Proyek
+### Lisensi
 
-\\\
-wifishield/
- src/              Kode sumber (C)
- include/          File header
- lib/              Library eksternal
- platformio.ini    Konfigurasi build
- QUICK_START.md    Panduan setup
- README.md         File ini
- LICENSE           MIT License
- .git/             Kontrol versi
-\\\
-
-### Disclaimer
-
- **PENTING:** Gunakan WiFiShield hanya pada network yang Anda miliki atau dengan izin eksplisit. Testing network tanpa izin adalah ilegal.
+MIT License - Bebas digunakan dan dimodifikasi
 
 ---
 
-## Downloads
-
-Download pre-built binaries and source code from [Releases](https://github.com/Harriiee/wifishield/releases)
-
-Unduh binary pre-built dan source code dari [Releases](https://github.com/Harriiee/wifishield/releases)
-
----
-
-## License
-
-MIT License - Free to use, modify, and distribute with attribution.
-
-MIT License - Bebas digunakan, dimodifikasi, dan didistribusikan dengan atribusi.
-
----
-
-## Repository
-
-https://github.com/Harriiee/wifishield
-
-**Last Updated:** January 2026
+Repository: https://github.com/Harriiee/wifishield

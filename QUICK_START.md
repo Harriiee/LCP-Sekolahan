@@ -1,132 +1,144 @@
-﻿# WiFiShield - Quick Start
+﻿# WiFiShield Quick Start
 
-Setup & Run WiFiShield on ESP32 for credential capture.
+Setup and run WiFiShield on ESP32 for credential capture.
 
 ---
 
 ## English
 
-### Prerequisites
+### Requirements
 
 - ESP32 Development Board
-- USB Cable
-- Python 3.8+ with PlatformIO
+- USB Cable  
+- Python 3.8 or higher
+- PlatformIO installed
 
-### Step 1: Build Firmware
+### Step 1: Clone Repository
 
-\\\ash
+\\\
+git clone https://github.com/Harriiee/wifishield.git
+cd wifishield
+\\\
+
+### Step 2: Build Firmware
+
+\\\
 python -m platformio run -e esp32
 \\\
 
-Wait for \[SUCCESS]\ message.
+Wait until you see SUCCESS message.
 
-### Step 2: Flash to ESP32
+### Step 3: Flash to ESP32
 
-Make sure ESP32 is connected via USB:
+Make sure ESP32 is connected via USB cable.
 
-\\\ash
+\\\
 python -m platformio run -e esp32 --target upload
 \\\
 
-Board will restart automatically.
+Board will restart automatically after flashing.
 
-### Step 3: Connect & Access
+### Step 4: Connect and Access
 
-1. Connect to WiFi: \WiFiShield\ (password: \12345678\)
-
-2. Open browser:
-   \\\
-   http://192.168.4.1/admin
-   \\\
-
-3. View captured credentials in "Passwords" tab
+1. Connect to WiFi network: WiFiShield
+2. Enter password: 12345678
+3. Open browser and go to: http://192.168.4.1/admin
+4. View captured credentials in Passwords tab
 
 ### Testing
 
-1. Visit: \http://192.168.4.1/login.html\
-2. Fill form (example: user123 / pass456)
-3. Submit
-4. Check admin page for captured credentials 
+1. Visit login page: http://192.168.4.1/login.html
+2. Enter any username and password
+3. Click submit
+4. Check admin panel to see captured credentials
 
 ### Troubleshooting
 
-| Error | Solution |
-|-------|----------|
-| Build fails | \pio system prune -f\ then rebuild |
-| Upload error | Check port: \pio device list\ |
-| 192.168.4.1 timeout | Ensure WiFi connection |
-| WiFi not visible | Reset board (press RESET button) |
+If build fails:
+\\\
+python -m platformio system prune -f
+python -m platformio run -e esp32
+\\\
+
+If upload fails:
+- Check USB cable connection
+- Verify COM port: python -m platformio device list
+- Try pressing RESET button on board
+
+If cannot access 192.168.4.1:
+- Ensure you are connected to WiFiShield network
+- Check WiFi password is correct
+- Reset the board
 
 ---
 
 ## Bahasa Indonesia
 
-### Prasyarat
+### Persyaratan
 
-- ESP32 Development Board
+- Board ESP32 Development
 - Kabel USB
-- Python 3.8+ dengan PlatformIO
+- Python 3.8 atau lebih tinggi
+- PlatformIO terinstall
 
-### Langkah 1: Build Firmware
+### Langkah 1: Clone Repository
 
-\\\ash
+\\\
+git clone https://github.com/Harriiee/wifishield.git
+cd wifishield
+\\\
+
+### Langkah 2: Build Firmware
+
+\\\
 python -m platformio run -e esp32
 \\\
 
-Tunggu hingga muncul pesan \[SUCCESS]\.
+Tunggu sampai muncul pesan SUCCESS.
 
-### Langkah 2: Flash ke ESP32
+### Langkah 3: Flash ke ESP32
 
-Pastikan ESP32 sudah terhubung via USB:
+Pastikan ESP32 sudah terhubung via kabel USB.
 
-\\\ash
+\\\
 python -m platformio run -e esp32 --target upload
 \\\
 
-Board akan restart otomatis.
+Board akan restart otomatis setelah flashing.
 
-### Langkah 3: Connect & Akses
+### Langkah 4: Hubungkan dan Akses
 
-1. Hubungkan ke WiFi: \WiFiShield\ (password: \12345678\)
-
-2. Buka browser:
-   \\\
-   http://192.168.4.1/admin
-   \\\
-
-3. Lihat kredensial tertangkap di tab "Passwords"
+1. Hubungkan ke WiFi: WiFiShield
+2. Masukkan password: 12345678
+3. Buka browser dan ke: http://192.168.4.1/admin
+4. Lihat kredensial tertangkap di tab Passwords
 
 ### Testing
 
-1. Kunjungi: \http://192.168.4.1/login.html\
-2. Isi form (contoh: user123 / pass456)
-3. Submit
-4. Cek halaman admin untuk melihat kredensial tertangkap 
+1. Kunjungi halaman login: http://192.168.4.1/login.html
+2. Masukkan username dan password apapun
+3. Klik submit
+4. Cek admin panel untuk melihat kredensial tertangkap
 
 ### Troubleshooting
 
-| Error | Solusi |
-|-------|--------|
-| Build gagal | \pio system prune -f\ lalu rebuild |
-| Error upload | Cek port: \pio device list\ |
-| 192.168.4.1 timeout | Pastikan terhubung ke WiFi |
-| WiFi tidak terlihat | Reset board (tekan tombol RESET) |
+Jika build gagal:
+\\\
+python -m platformio system prune -f
+python -m platformio run -e esp32
+\\\
+
+Jika upload gagal:
+- Cek koneksi kabel USB
+- Verifikasi COM port: python -m platformio device list
+- Coba tekan tombol RESET di board
+
+Jika tidak bisa akses 192.168.4.1:
+- Pastikan terhubung ke network WiFiShield
+- Cek password WiFi benar
+- Reset board
 
 ---
 
-## File Structure
-
-\\\
- src/              Source code
- include/          Headers
- platformio.ini    Build config
- QUICK_START.md    Guide (this file)
- README.md         Full documentation
- LICENSE           MIT License
-\\\
-
----
-
-For full documentation, see **README.md**
-
-Untuk dokumentasi lengkap, lihat **README.md**
+For more information, see README.md
+Untuk informasi lebih lanjut, lihat README.md
